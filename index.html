@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html5>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -11,268 +11,225 @@
     <title>ISA at SUNY Korea</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="icon" type="image/png" href="./assets/images/logo.png" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- CSS  -->
-    <link rel="stylesheet" href="style.css">
-    <!-- jQuery min -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Jquery Min -->
+    <script src="./assets/scripts/jquery.slim.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="./assets/scripts/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/styles/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <!-- Animations AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <div class="container">
-        <!-- NAVBAR-->
-        <nav class="navbar navbar-expand-lg shadow-sm navbar-light bg-light">
-            <div class="container">
-                <a href="#" class="navbar-brand">
-                    <!-- Logo Text -->
-                    <span class="font-weight-bold" id="LogoText">International Students' Association at SUNY
-                        Korea</span>
-                </a>
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
 
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#" class="nav-link">Home <span
-                                    class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Membership</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
-                    </ul>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="font-weight-bold" id="LogoText" href="/">International Students' Association at SUNY Korea</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <div class="body">
-
-            <div id="about-us">
-                <h4>ABOUT US:</h4>
-                <div id="image-carousel">
-                    <!-- Image gallery in homepage -->
-                    <!--  Camera_Slideshow Styles  -->
-                    <link rel="stylesheet" id="camera-css"
-                        href="http://project.dimpost.com/camera-slideshow/css/camera.css" type="text/css" media="all" />
-                    <!-- Camera Slideshow Scripts -->
-                    <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
-                    <script type='text/javascript'
-                        src='http://project.dimpost.com/camera-slideshow/scripts/jquery.mobile.customized.min.js'>
-                    </script>
-                    <script type='text/javascript'
-                        src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
-                    <script type='text/javascript'
-                        src='http://project.dimpost.com/camera-slideshow/scripts/camera.min.js'>
-                    </script>
-                    <script type='text/javascript'>
-                        jQuery(function () {
-                            jQuery('#camera_wrap_1').camera({
-                                time: 2500, // milliseconds between the end of the sliding effect and the start of the nex one
-                                transPeriod: 1200, // length of the sliding effect in milliseconds
-                                thumbnails: false, // thumnails & tooltip is controlled by it
-                                pagination: true, // only when "pagination" is set to "false" thumbnails will be visible
-                                fx: 'curtainTopLeft, curtainTopRight, curtainBottomLeft, curtainBottomRight, curtainSliceLeft, curtainSliceRight, blindCurtainTopLeft, blindCurtainTopRight, blindCurtainBottomLeft, blindCurtainBottomRight, blindCurtainSliceBottom, blindCurtainSliceTop, stampede, mosaic, mosaicReverse, mosaicRandom, mosaicSpiral, mosaicSpiralReverse, topLeftBottomRight, bottomRightTopLeft, bottomLeftTopRight, bottomLeftTopRight, scrollLeft, scrollRight, scrollHorz, scrollBottom, scrollTop', // transition effects
-                                hover: false, // Pause on hover
-                                height: '50%' // slideshow height (50% is default)
-                            });
-                        });
-                    </script>
-                    <style type="text/css">
-                        .fluid_container {
-                            margin: 0 auto;
-                            /* aling centered */
-                            width: 100%;
-                            max-width: 900px;
-                            overflow: hidden;
-                        }
-
-                        /* Blogger CSS Conflict Fix */
-
-                        .camera_pag_ul {
-                            border: none !important;
-                            background: none !important;
-                        }
-
-                        .camera_pag_ul li {
-                            float: inherit !important;
-                            padding: inherit !important;
-                        }
-
-                        .camera_pag_ul {
-                            margin: 0 !important;
-                            border: 0 !important;
-                        }
-                    </style>
-                    <div class="fluid_container">
-                        <!-- camera_slideshow camera_wrap-->
-                        <div class="camera_wrap" id="camera_wrap_1">
-                            <div data-link="https://www.sunykoreaisa.org"
-                                data-thumb="https://1.bp.blogspot.com/-rdILQaYJ1Mw/Xc-7QoJfyoI/AAAAAAAAARE/7o58xbQvhyYJQJy2ybzcei_QBWfgLXWPgCLcBGAsYHQ/s1600/93463CCE-084F-11EA-B9CD-0E4CBA687083.jpg"
-                                data-src="https://1.bp.blogspot.com/-rdILQaYJ1Mw/Xc-7QoJfyoI/AAAAAAAAARE/7o58xbQvhyYJQJy2ybzcei_QBWfgLXWPgCLcBGAsYHQ/s1600/93463CCE-084F-11EA-B9CD-0E4CBA687083.jpg">
-                                <div class="camera_caption fadeFromBottom">
-                                    International Students' Dinner (Fall 2019) </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org"
-                                data-thumb="https://1.bp.blogspot.com/-MGMwIupD2lM/XeItswewHQI/AAAAAAAAASY/CZic5rTOe-sXJZpwOLBKqdDVySoYU_6hQCLcBGAsYHQ/s1600/grp_f.jpeg"
-                                data-src="https://1.bp.blogspot.com/-MGMwIupD2lM/XeItswewHQI/AAAAAAAAASY/CZic5rTOe-sXJZpwOLBKqdDVySoYU_6hQCLcBGAsYHQ/s1600/grp_f.jpeg">
-                                <div class="camera_caption fadeFromBottom">
-                                    International Students' Dinner (Fall 2019) </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html"
-                                data-thumb="https://1.bp.blogspot.com/-S7HrNv9G2n8/XVOrEoGj9uI/AAAAAAAAAI8/7dyXiQou-W4LjczRbdL9XkEPaQbBNbCXgCLcBGAs/s1600/IMG_0555.JPG"
-                                data-src="https://1.bp.blogspot.com/-S7HrNv9G2n8/XVOrEoGj9uI/AAAAAAAAAI8/7dyXiQou-W4LjczRbdL9XkEPaQbBNbCXgCLcBGAs/s1600/IMG_0555.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Group Photo at Iftar Dinner (Spring 2019)
-                                </div>
-                            </div>
-                            <div data-link="https://1.bp.blogspot.com/-5sLixfFhOIM/XYUILWfmxvI/AAAAAAAAAN8/So-0vBYc0yM4H-MkUwQ9VNLBNuGOfooPgCLcBGAsYHQ/s1600/67953383_372133380362252_5237730092233654639_n.jpg"
-                                data-src="https://1.bp.blogspot.com/-5sLixfFhOIM/XYUILWfmxvI/AAAAAAAAAN8/So-0vBYc0yM4H-MkUwQ9VNLBNuGOfooPgCLcBGAsYHQ/s1600/67953383_372133380362252_5237730092233654639_n.jpg">
-                                <div class="camera_caption fadeFromBottom">
-                                    Women Power: ISA Executive Team (2019-20) (from left: Kelly, Alexa, Binur)
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/"
-                                data-thumb="https://1.bp.blogspot.com/-DQmgJ5-W3x0/XYOAz0GP0FI/AAAAAAAAANY/cMTQf1GUn6k_pbNfDUeUs3EIGiIxjenzACLcBGAsYHQ/s1600/DSC00138.JPG"
-                                data-src="https://1.bp.blogspot.com/-DQmgJ5-W3x0/XYOAz0GP0FI/AAAAAAAAANY/cMTQf1GUn6k_pbNfDUeUs3EIGiIxjenzACLcBGAsYHQ/s1600/DSC00138.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Club Expo Fall 2019
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/"
-                                data-thumb="https://1.bp.blogspot.com/-qNEViaco8rY/XYOAz9F2gQI/AAAAAAAAANc/w-iQ4TJhLXIBdlRIKCBBp2n9vBvIVQRNQCLcBGAsYHQ/s1600/DSC00151.JPG"
-                                data-src="https://1.bp.blogspot.com/-qNEViaco8rY/XYOAz9F2gQI/AAAAAAAAANc/w-iQ4TJhLXIBdlRIKCBBp2n9vBvIVQRNQCLcBGAsYHQ/s1600/DSC00151.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Emerald from Myanmar in Fall 2019 Club Expo
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/movie-night.html"
-                                data-thumb="https://1.bp.blogspot.com/-O7ke8LwAxrw/XVPCDXdkzVI/AAAAAAAAAKk/UuuZ5gD1kqoN2K41whRKxo3iBmKGzJoNQCLcBGAs/s1600/IMG_8886.JPG"
-                                data-src="https://1.bp.blogspot.com/-O7ke8LwAxrw/XVPCDXdkzVI/AAAAAAAAAKk/UuuZ5gD1kqoN2K41whRKxo3iBmKGzJoNQCLcBGAs/s1600/IMG_8886.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Rahel and Tia enjoying at ISA's Movie Night
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html/"
-                                data-thumb="https://1.bp.blogspot.com/-UDQ8wvRhaVM/XVO3V9zAcCI/AAAAAAAAAJw/FR5IOxjo0QccbfgjUc7WcsBnndpCUO1dACLcBGAs/s1600/IMG_0479%2B%25281%2529.JPG"
-                                data-src="https://1.bp.blogspot.com/-UDQ8wvRhaVM/XVO3V9zAcCI/AAAAAAAAAJw/FR5IOxjo0QccbfgjUc7WcsBnndpCUO1dACLcBGAs/s1600/IMG_0479%2B%25281%2529.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Nilson From Nepal and Crispen from Zimbabwe in their traditional dressing
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/movie-night.html"
-                                data-thumb="https://1.bp.blogspot.com/-s6HxhmcxCJE/XVPB3UCQcwI/AAAAAAAAAKY/uxLCAlU8SgQN7qWyGOT-zxm_bU0ZX9VrwCLcBGAs/s1600/IMG_8826.JPG"
-                                data-src="https://1.bp.blogspot.com/-s6HxhmcxCJE/XVPB3UCQcwI/AAAAAAAAAKY/uxLCAlU8SgQN7qWyGOT-zxm_bU0ZX9VrwCLcBGAs/s1600/IMG_8826.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Anushka from India at ISA's Movie Night
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html/"
-                                data-thumb="https://1.bp.blogspot.com/-SOZ2kfOBU10/XVPIWd4P5WI/AAAAAAAAALY/R-Y5v_Ij0BM0F824gpuv0RxH-eO-YQxswCLcBGAs/s1600/rsz_1rsz_img_0565.jpg"
-                                data-src="https://1.bp.blogspot.com/-SOZ2kfOBU10/XVPIWd4P5WI/AAAAAAAAALY/R-Y5v_Ij0BM0F824gpuv0RxH-eO-YQxswCLcBGAs/s1600/rsz_1rsz_img_0565.jpg">
-                                <div class="camera_caption fadeFromBottom">
-                                    Roshan, ISA Founder and President(2018-19), with Professor Lee
-                                </div>
-                            </div>
-                            <div data-link="https://www.instagram.com/sunykoreaisa/"
-                                data-thumb="https://1.bp.blogspot.com/-7D6t5FmQcag/XVPN5LE2wMI/AAAAAAAAAMQ/bcU8Il1b3WE2wr-1XGmWH1udnLhDxmHwwCLcBGAs/s1600/47031148_2004751282948279_4772813325173163196_n.jpg"
-                                data-src="https://1.bp.blogspot.com/-7D6t5FmQcag/XVPN5LE2wMI/AAAAAAAAAMQ/bcU8Il1b3WE2wr-1XGmWH1udnLhDxmHwwCLcBGAs/s1600/47031148_2004751282948279_4772813325173163196_n.jpg">
-                                <div class="camera_caption fadeFromBottom">
-                                    Alexa, ISA President(2019-20) and Secretary(2018-19), enjoying the snow
-                                </div>
-                            </div>
-                            <div data-link="https://www.instagram.com/sunykoreaisa/"
-                                data-thumb="https://1.bp.blogspot.com/-jvf0cmTgQxM/XVPN5Gt1MSI/AAAAAAAAAMU/19DJFIo0pN8vbi4aR-wKWIBYQq4AMYHuQCLcBGAs/s1600/46474450_359406917972405_8042906064884090940_n.jpg"
-                                data-src="https://1.bp.blogspot.com/-jvf0cmTgQxM/XVPN5Gt1MSI/AAAAAAAAAMU/19DJFIo0pN8vbi4aR-wKWIBYQq4AMYHuQCLcBGAs/s1600/46474450_359406917972405_8042906064884090940_n.jpg">
-                                <div class="camera_caption fadeFromBottom">
-                                    Students from StonyBrook enjoying the Snow on campus
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html/"
-                                data-thumb="https://1.bp.blogspot.com/-TqCaubZ-O18/XVOq7CgM9CI/AAAAAAAAAIc/G2ln201KvaklTzQhh-NTvBEgJ3_5MhkRQCLcBGAs/s1600/IMG_0467.JPG"
-                                data-src="https://1.bp.blogspot.com/-TqCaubZ-O18/XVOq7CgM9CI/AAAAAAAAAIc/G2ln201KvaklTzQhh-NTvBEgJ3_5MhkRQCLcBGAs/s1600/IMG_0467.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Rahel and Tia from Ethiopia in their traditional costumes
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html"
-                                data-thumb="https://1.bp.blogspot.com/-av3himzlLl8/XVPLeo0h8GI/AAAAAAAAALs/cBTQWMYNcH8mcy4phVLh21A9OldiOE0ugCLcBGAs/s1600/IMG_0493.JPG"
-                                data-src="https://1.bp.blogspot.com/-av3himzlLl8/XVPLeo0h8GI/AAAAAAAAALs/cBTQWMYNcH8mcy4phVLh21A9OldiOE0ugCLcBGAs/s1600/IMG_0493.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Students from FIT and StonyBrook enjoying the Iftar Dinner
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html"
-                                data-thumb="https://1.bp.blogspot.com/-58tBcr89cOA/XVPLe4Hgj0I/AAAAAAAAALw/KX6UbD6yUGM6iRMoMpkw_JikeYgkrV1mgCLcBGAs/s1600/IMG_0488.JPG"
-                                data-src="https://1.bp.blogspot.com/-58tBcr89cOA/XVPLe4Hgj0I/AAAAAAAAALw/KX6UbD6yUGM6iRMoMpkw_JikeYgkrV1mgCLcBGAs/s1600/IMG_0488.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Food Served at Iftar Dinner (Spring 2019)
-                                </div>
-                            </div>
-                            <div data-link="https://www.sunykoreaisa.org/p/iftar-dinner.html/"
-                                data-thumb="https://1.bp.blogspot.com/-2fxg9e_93tE/XVOrIlqeq3I/AAAAAAAAAJA/hqQOM7zeysodjeGO_tijt-5wTZt3yi-rgCLcBGAs/s1600/IMG_0603.JPG"
-                                data-src="https://1.bp.blogspot.com/-2fxg9e_93tE/XVOrIlqeq3I/AAAAAAAAAJA/hqQOM7zeysodjeGO_tijt-5wTZt3yi-rgCLcBGAs/s1600/IMG_0603.JPG">
-                                <div class="camera_caption fadeFromBottom">
-                                    Performance from our talented students at Iftar Dinner
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p>The International Student's Association at SUNY Korea (ISA) is a community of International
-                    Students
-                    studying at The State University of New York, Korea. ISA is an officially recognized club at
-                    SUNY
-                    Korea
-                    since October 2nd, 2018.
-                    <img id="ilogo"
-                        src="https://2.bp.blogspot.com/-USVDNhTcXlk/W8ykMLcbPiI/AAAAAAAAABg/_FdkMq1cA54U_iKUoNBCAsmjK3weAh-QwCK4BGAYYCw/s1600/fb-cover.pngIS"
-                        alt="ISA logo" width="200px" height="100px">
-
-
-                </p>
-
-
-            </div>
-
         </div>
+    </nav>
 
-
-
-        <!--------------Footer------------------->
-        <section id="footer">
-            <div class="container navbar navbar  bg-light">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p><b>Attributions</b></p>
-                            @ 2020 ISA at SUNY Korea - All Rights Reserved<br>
-                            Website by <a href="https://iamroshanpoudel.com">Roshan Poudel</a>
-                            </p>
-
-                        </div>
-
-                        <div class="col-md-6">
-                            <p><b>Contact Us</b></p>
-                            <p>C512, SUNY Korea, 119 Songdo Moonhwa-Ro Incheon, Korea (21985)</p>
-
-                        </div>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('./assets/images/1.jpg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">International Students' Dinner (Fall 2019)</p>
                     </div>
                 </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/2.jpeg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">International Students' Dinner (Fall 2019)</p>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/3.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Group Photo at Iftar Dinner (Spring 2019)
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Four - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/4.jpg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">ISA Executive Team (2019-20) (from left: Kelly, Alexa, Binur)
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Five - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/5.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Club Expo Fall 2019
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Six - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/6.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Emerald from Myanmar in Fall 2019 Club Expo</p>
+                    </div>
+                </div>
+                <!-- Slide Seven - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/7.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead"> Rahel and Tia enjoying at ISA's Movie Night</p>
+
+                    </div>
+                </div>
+                <!-- Slide Eight - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/8.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Nilson From Nepal and Crispen from Zimbabwe in their traditional dressing .</p>
+                    </div>
+                </div>
+                <!-- Slide Nine - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/9.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Anushka from India at ISA's Movie Night</p>
+                    </div>
+                </div>
+                <!-- Slide Ten - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/10.jpg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Roshan, ISA Founder and President(2018-19), with Professor Lee</p>
+                    </div>
+                </div>
+                <!-- Slide Eleven - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/11.jpg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Alexa, ISA President(2019-20) and Secretary(2018-19), enjoying the snow</p>
+                    </div>
+                </div>
+                <!-- Slide Twelve - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/12.jpg')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Students from StonyBrook enjoying the Snow on campus
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Thirteen - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/13.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Rahel and Tia from Ethiopia in their traditional costumes</p>
+                    </div>
+                </div>
+                <!-- Slide Fourteen - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/14.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Food Served at Iftar Dinner (Spring 2019)</p>
+                    </div>
+                </div>
+                <!-- Slide Fifteen - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/15.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Performance from our talented students at Iftar Dinner</p>
+                    </div>
+                </div>
+                <!-- Slide Sixteen - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('./assets/images/16.JPG')">
+                    <div class=" carousel-caption d-none d-md-block" data-aos="slide-up">
+                        <h2 class="display-4"></h2>
+                        <p class="lead">Students from FIT and StonyBrook enjoying the Iftar Dinner</p>
+                    </div>
+                </div>
+
+
             </div>
-        </section>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
 
-    </div>
+    <!-- Page Content -->
+    <section id="jumbotron">
+        <div class="jumbotron">
+            <h1 class="display-5">International Students' Association at SUNY Korea</h1>
+            <p class="lead">The International Student's Association at SUNY Korea (ISA) is a community of International
+                Students studying at The State University of New York, Korea. ISA is an officially recognized club at
+                SUNY Korea since October 2nd, 2018.</p>
 
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Become a Member!</a>
+            </p>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; ISA @ <a href="http://www.sunykorea.ac.kr">SUNY Korea</a></small><br>
+            <small>Website by <a href="https://iamroshanpoudel.com">Roshan Poudel</a> </small>
+        </div>
+    </footer>
 
+    <!-- Required Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
