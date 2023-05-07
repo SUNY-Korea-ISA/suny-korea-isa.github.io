@@ -1,6 +1,6 @@
 .carousel-item {
-	height: 100vh;
-	min-height: 350px;
+	height: 90vh;
+	min-height: 300px;
 	background: no-repeat center center scroll;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -9,11 +9,26 @@
 }
 
 #LogoText {
-	font-family: 'Caveat Brush', cursive;
-	font-size: 35px;
-	color: #00ccff;
+	font-family: "Caveat Brush", cursive;
+	font-size: xx-large;
+	color: black;
+	width: 100%;
 }
 
-.carousel-item .lead{
-    background: black;
+.carousel-item .lead {
+	background: black;
+}
+
+#body {
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+#roshan {
+	width: 200px;
+	padding-right: 50px;
+}
+
+#team-members {
+	display: flex;
 }
